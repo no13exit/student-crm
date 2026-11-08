@@ -1,16 +1,61 @@
-# React + Vite
+# Student CRM — HW38
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Учебное React-приложение для отображения списка студентов.
 
-Currently, two official plugins are available:
+## Описание
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Приложение показывает карточки студентов с именем, возрастом, учебной группой и статусом обучения.
 
-## React Compiler
+Проект создан в рамках домашнего задания №38 для практики React-компонентов, props, отображения массивов и условного рендеринга.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Функциональность
 
-## Expanding the Oxlint configuration
+- Отображение пяти студентов.
+- Передача данных между компонентами через props.
+- Отдельная карточка для каждого студента.
+- Статусы «Активен» и «На паузе».
+- Условное оформление статусов.
+- Сообщение для студентов младше 18 лет.
+- Сообщение при пустом списке.
+- Автоматический подсчёт студентов через `students.length`.
+- Отдельные компоненты Header и Footer.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Компоненты
+
+| Компонент | Назначение |
+|---|---|
+| App | Главный компонент приложения |
+| Header | Заголовок страницы |
+| StudentList | Список студентов и обработка пустого списка |
+| StudentCard | Информация об отдельном студенте |
+| StatusBadge | Статус обучения |
+| Footer | Подвал страницы |
+
+## Данные
+
+Данные находятся в `src/data/students.js`.
+
+В массиве пять студентов с уникальными ID. Четыре студента активны, один находится на паузе. Студент с ID 5 — Emily Davis, 17 лет.
+
+Все данные статические и хранятся локально. Backend, формы и React state не используются.
+
+## Технологии
+
+- React
+- JavaScript
+- JSX
+- CSS
+- Vite
+
+## Запуск
+
+```bash
+npm install
+npm run dev
+```
+
+После запуска открыть локальный адрес, указанный Vite.
+
+## Автор
+
+Учебный проект курса Fullstack Developer.

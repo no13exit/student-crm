@@ -21,17 +21,18 @@ export const students =[
 		"isActive": false
 	},
 	{
-		"id": 4,
-		"name": "Michael Brown",
-		"age": 23,
-		"group": "React Advanced",
-		"isActive": true
-	},
-	{
 		"id": 5,
 		"name": "Emily Davis",
 		"age": 17,
 		"group": "React Basics",
 		"isActive": true
 	},
+	{
+		"id": 3,
+		"name": "Michael Brown",
+		"age": 23,
+		"group": "React Advanced",
+		"isActive": true
+	},
+
 ];
