@@ -86,3 +86,11 @@
   font-weight: bold;
   color: darkgoldenrod;
 }
+
+.active {
+  color: green;
+}
+
+.paused {
+  color: orange;
+}
