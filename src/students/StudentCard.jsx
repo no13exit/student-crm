@@ -1,5 +1,5 @@
 
-import StatusBadge from './StatusBadge';
+import StatusBadge from './StatusBadge.jsx';
 
 function StudentCard({ student }) {
 	return (

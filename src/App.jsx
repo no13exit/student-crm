@@ -2,7 +2,7 @@
 import './App.css';
 import { students } from './data/students';
 import Header from './components/Header';
-import StudentList from './components/StudentList';
+import StudentList from './students/StudentList.jsx';
 import Footer from './components/Footer';
 
 function App() {

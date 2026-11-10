@@ -1,5 +1,5 @@
 
-import StudentCard from './StudentCard';
+import StudentCard from './StudentCard.jsx';
 
 function StudentList({ students }) {
 	return (
@@ -23,6 +23,7 @@ function StudentList({ students }) {
 	);
 }
 
+// https://react.dev/learn/rendering-lists?
 // function StudentList({ students }) {
 // 	return (
 // 		<div>
