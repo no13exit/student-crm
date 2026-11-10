@@ -1,63 +1,41 @@
 
-import './App.css';
-import { students } from './data/students';
 import Header from './components/Header';
-import StudentList from './students/StudentList.jsx';
 import Footer from './components/Footer';
+import StudentList from './students/StudentList';
+import CourseList from './courses/CourseList';
+import { students } from './data/students';
+import { courses } from './data/courses';
+import './App.css';
 
 function App() {
-  return (
-      <div>
-        <Header />
-        <StudentList students={students} />
-        <Footer />
-      </div>
-  );
+    return (
+        <div>
+            <Header />
+
+            <div className="dashboard">
+                <div className="switcher">
+                    <span>Student CRM</span>
+
+                    <label className="switch">
+                        <input type="checkbox" />
+                        <span className="slider"></span>
+                    </label>
+
+                    <span>Course Catalog</span>
+                </div>
+
+                <div className="students-section">
+                    <StudentList students={students} />
+                </div>
+
+                <div className="courses-section">
+                    <CourseList courses={courses} />
+                </div>
+            </div>
+
+            <Footer />
+        </div>
+    );
 }
 
 export default App;
-
-// +------------------------------------------------------+
-// |                     STUDENT CRM                      |
-// |            Система управления студентами             |
-// +------------------------------------------------------+
-// |                                                      |
-// |                  Наши студенты                       |
-// |                                                      |
-// |              Всего студентов: 5                      |
-// |                                                      |
-// |  +------------------------------------------------+  |
-// |  | Anna Cohen                          [Активен]  |  |
-// |  | Возраст: 25                                   |  |
-// |  | Группа: React Basics                          |  |
-// |  +------------------------------------------------+  |
-// |                                                      |
-// |  +------------------------------------------------+  |
-// |  | David Levi                          [Активен]  |  |
-// |  | Возраст: 28                                   |  |
-// |  | Группа: Python Basics                         |  |
-// |  +------------------------------------------------+  |
-// |                                                      |
-// |  +------------------------------------------------+  |
-// |  | Sarah Miller                         [Пауза]   |  |
-// |  | Возраст: 23                                   |  |
-// |  | Группа: JavaScript                            |  |
-// |  +------------------------------------------------+  |
-// |                                                      |
-// |  +------------------------------------------------+  |
-// |  | Michael Brown                       [Активен]  |  |
-// |  | Возраст: 30                                   |  |
-// |  | Группа: React Basics                          |  |
-// |  +------------------------------------------------+  |
-// |                                                      |
-// |  +------------------------------------------------+  |
-// |  | Daniel Green                        [Активен]  |  |
-// |  | Возраст: 17                                   |  |
-// |  | Группа: React Basics                          |  |
-// |  | Несовершеннолетний студент                    |  |
-// |  +------------------------------------------------+  |
-// |                                                      |
-// +------------------------------------------------------+
-// |             Student CRM — учебный проект             |
-// +------------------------------------------------------+
-//
