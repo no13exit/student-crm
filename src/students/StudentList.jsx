@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { students as initialStudents } from '../data/students.js';
 import StudentCard from './StudentCard.jsx';
+import Card from '../components/Card.jsx';
 
 function StudentList() {
 	const [students, setStudents] = useState(initialStudents);
@@ -42,10 +43,11 @@ function StudentList() {
 			<h2>Наши студенты</h2>
 			<p>Всего студентов: {students.length}</p>
 
-			<form onSubmit={addStudent}>
+			<Card>
+				<form className="student-form" onSubmit={addStudent}>
 				<h3>Add Student</h3>
-
-				<div>
+				<div className="student-form-fields">
+				<div className="form-field">
 					<label htmlFor="student-name">Name: </label>
 					<input
 						id="student-name"
@@ -56,7 +58,7 @@ function StudentList() {
 					/>
 				</div>
 
-				<div>
+				<div className="form-field">
 					<label htmlFor="student-age">Age: </label>
 					<input
 						id="student-age"
@@ -68,7 +70,7 @@ function StudentList() {
 					/>
 				</div>
 
-				<div>
+				<div className="form-field">
 					<label htmlFor="student-group">Group: </label>
 					<select
 						id="student-group"
@@ -80,7 +82,7 @@ function StudentList() {
 					</select>
 				</div>
 
-				<div>
+					<div className="form-checkbox">
 					<label htmlFor="student-active">
 						<input
 							id="student-active"
@@ -93,7 +95,9 @@ function StudentList() {
 				</div>
 
 				<button type="submit">Add Student</button>
+				</div>
 			</form>
+			</Card>
 
 			{students.length === 0 ? (
 				<p>Список студентов пуст</p>
