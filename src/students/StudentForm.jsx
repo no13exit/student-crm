@@ -85,7 +85,7 @@ function StudentForm({ onAdd }) {
 					</div>
 
 					<button className="add-student-btn" type="submit">
-						Add Student
+						 Добавить студента
 					</button>
 				</div>
 			</form>
