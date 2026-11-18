@@ -38,7 +38,7 @@ function StudentForm({ onAdd }) {
 
 				<div className="student-form-fields">
 					<div className="form-field">
-						<label htmlFor="student-name">Name</label>
+						<label htmlFor="student-name">Имя</label>
 						<input
 							id="student-name"
 							type="text"
@@ -49,7 +49,7 @@ function StudentForm({ onAdd }) {
 					</div>
 
 					<div className="form-field">
-						<label htmlFor="student-age">Age</label>
+						<label htmlFor="student-age">Возраст</label>
 						<input
 							id="student-age"
 							type="number"
@@ -61,7 +61,7 @@ function StudentForm({ onAdd }) {
 					</div>
 
 					<div className="form-field">
-						<label htmlFor="student-group">Group</label>
+						<label htmlFor="student-group">Группа</label>
 						<select
 							id="student-group"
 							value={group}

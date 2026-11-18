@@ -1,61 +1,84 @@
-# Student CRM — HW38
+# Student CRM — HW38 + HW41
 
-Учебное React-приложение для отображения списка студентов.
+A simple React application for displaying and managing students, developed as part of a Fullstack Developer course.
 
-## Описание
+## Features
 
-Приложение показывает карточки студентов с именем, возрастом, учебной группой и статусом обучения.
+- Display student cards with name, age, group, and enrollment status.
+- Add students using a form with controlled inputs.
+- Validate required fields and student age.
+- Submit the form using the button or Enter.
+- Generate unique student IDs using `crypto.randomUUID()`.
+- Delete students by ID.
+- Automatically update the total student count.
+- Display a message when the student list is empty.
+- Highlight students under 18.
+- Switch between Student CRM and Course Catalog.
+- Responsive student creation form.
 
-Проект создан в рамках домашнего задания №38 для практики React-компонентов, props, отображения массивов и условного рендеринга.
+## React Concepts
 
-## Функциональность
+The project demonstrates:
 
-- Отображение пяти студентов.
-- Передача данных между компонентами через props.
-- Отдельная карточка для каждого студента.
-- Статусы «Активен» и «На паузе».
-- Условное оформление статусов.
-- Сообщение для студентов младше 18 лет.
-- Сообщение при пустом списке.
-- Автоматический подсчёт студентов через `students.length`.
-- Отдельные компоненты Header и Footer.
+- Functional components and JSX.
+- Passing data and callbacks through props.
+- Managing arrays and form inputs with `useState`.
+- Handling events with `onChange`, `onSubmit`, and `onClick`.
+- Updating state immutably using the spread operator and `filter()`.
+- Rendering lists using `map()` and unique keys.
+- Conditional rendering.
+- Reusing UI components.
 
-## Компоненты
+## Component Structure
 
-| Компонент | Назначение |
+| Component | Responsibility |
 |---|---|
-| App | Главный компонент приложения |
-| Header | Заголовок страницы |
-| StudentList | Список студентов и обработка пустого списка |
-| StudentCard | Информация об отдельном студенте |
-| StatusBadge | Статус обучения |
-| Footer | Подвал страницы |
+| App | Main application layout and section switcher |
+| Header | Application header |
+| StudentList | Student state, adding and deleting students |
+| StudentForm | Form state, validation and submission |
+| StudentCard | Displays student information and delete button |
+| StatusBadge | Displays enrollment status |
+| Card | Reusable card container |
+| CourseList | Displays the course catalog |
+| Footer | Application footer |
 
-## Данные
+## State Management
 
-Данные находятся в `src/data/students.js`.
+The initial student data is imported from `src/data/students.js`.
 
-В массиве пять студентов с уникальными ID. Четыре студента активны, один находится на паузе. Студент с ID 5 — Emily Davis, 17 лет.
+`StudentList` maintains the students array using React `useState`.
 
-Все данные статические и хранятся локально. Backend, формы и React state не используются.
+`StudentForm` manages its own form fields and passes a newly created student to `StudentList` through an `onAdd` callback.
 
-## Технологии
+Students are added by creating a new array with the spread operator and removed using `filter()`.
+
+All changes are stored in React state only. They are not persisted and will be reset when the page is reloaded.
+
+## Technologies
 
 - React
 - JavaScript
 - JSX
+- HTML
 - CSS
 - Vite
 
-## Запуск
+## Running Locally
 
 ```bash
 npm install
 npm run dev
 ```
 
-После запуска открыть локальный адрес, указанный Vite.
+Open the local URL displayed by Vite.
 
-## Автор
+## Build
 
-Учебный проект курса Fullstack Developer.
+```bash
+npm run build
+```
+
+## Project Scope
+
+This is an educational frontend project. It does not include a backend, database, authentication, or persistent storage.
