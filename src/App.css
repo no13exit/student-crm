@@ -1,8 +1,8 @@
-
 .dashboard {
   padding: 20px;
 }
 
+/* CRM / Course Catalog switcher */
 .switcher {
   display: flex;
   justify-content: center;
@@ -67,6 +67,7 @@
   display: block;
 }
 
+/* Student and course cards */
 .card {
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -87,10 +88,127 @@
   color: darkgoldenrod;
 }
 
-.active {
-  color: green;
+/* Student creation form */
+.student-form {
+  margin: 24px 0;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f8f9fa;
 }
 
-.paused {
-  color: orange;
+.student-form h3 {
+  margin: 0 0 20px;
+  font-size: 20px;
+}
+
+.student-form-fields {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 16px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 150px;
+  gap: 8px;
+}
+
+.form-field label {
+  font-weight: 500;
+}
+
+.form-field input,
+.form-field select {
+  width: 100%;
+  height: 40px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: white;
+  font: inherit;
+  box-sizing: border-box;
+}
+
+.form-field input:focus,
+.form-field select:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 1px;
+}
+
+.form-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.form-checkbox input {
+  accent-color: #2563eb;
+  width: 16px;
+  height: 16px;
+}
+
+.add-student-btn {
+  height: 40px;
+  padding: 0 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: #2563eb;
+  color: white;
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.add-student-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.add-student-btn:focus-visible {
+  outline: 2px solid #1d4ed8;
+  outline-offset: 3px;
+}
+
+/* Mobile layout */
+@media (max-width: 650px) {
+  .student-form-fields {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form-field {
+    width: 100%;
+    min-width: 0;
+    flex: none;
+  }
+
+  .form-checkbox {
+    height: auto;
+  }
+
+  .add-student-btn {
+    width: 100%;
+  }
+}
+.delete-student-btn {
+  margin-top: 12px;
+  padding: 8px 16px;
+  border: 1px solid #dc3545;
+  border-radius: 6px;
+  background-color: white;
+  color: #dc3545;
+  font: inherit;
+  cursor: pointer;
+}
+
+.delete-student-btn:hover {
+  background-color: #dc3545;
+  color: white;
 }

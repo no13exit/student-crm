@@ -3,7 +3,6 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import StudentList from './students/StudentList';
 import CourseList from './courses/CourseList';
-import { students } from './data/students';
 import { courses } from './data/courses';
 import './App.css';
 
@@ -25,7 +24,7 @@ function App() {
                 </div>
 
                 <div className="students-section">
-                    <StudentList students={students} />
+                    <StudentList />
                 </div>
 
                 <div className="courses-section">
